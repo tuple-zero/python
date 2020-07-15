@@ -5,16 +5,16 @@ def get_input():
 
 
 def show_list(in_list):
+    print("列表：")
+    print("姓名\t性别\t年龄\t电话号码")
+    for x in in_list:
+        print(x)
+
+
+def show_out_list(in_list):
     print("淘汰列表：")
     print("姓名\t性别\t年龄\t电话号码")
     for x in in_list:
         if in_list.index(x) == len(in_list)-1:
             break
         print(x)
-
-
-def get_success_person(in_list):
-    person = in_list[len(in_list)-1]
-    print("最后胜利的人是：%s" % person.get_name())
-    print("具体信息为：")
-    print(person)
