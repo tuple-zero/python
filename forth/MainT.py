@@ -4,13 +4,15 @@ import forth.Fileopen as fp
 import forth.InData as ind
 
 
-def test_iter(people_list):
+def test_iter(in_list):
     test_joseph = joseph.Josephus()
-    test_joseph.add_joseph(people_list)
+    test_joseph.add_joseph(in_list)
     for x in test_joseph:
         print(x)
 
-people_list = fp.open_file()
+
+file_path = "../test.txt"
+people_list = fp.open_file(file_path)
 ind.show_list(people_list)
 rule, start_num = ind.get_input()
 
