@@ -5,6 +5,19 @@ class Josephus(object):
         self.out_people = []
         self.step = 0
         self.start = 1
+        self._iter = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self._iter < len(self.people):
+            people = self.people[self._iter]
+            self._iter += 1
+            return people
+        else:
+            self._iter = 0
+            raise StopIteration()
 
     def add_joseph(self, person):
         self.people.append(person)
