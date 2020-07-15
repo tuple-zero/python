@@ -9,12 +9,3 @@ def show_list(in_list):
     print("姓名\t性别\t年龄\t电话号码")
     for x in in_list:
         print(x)
-
-
-def show_out_list(in_list):
-    print("淘汰列表：")
-    print("姓名\t性别\t年龄\t电话号码")
-    for x in in_list:
-        if in_list.index(x) == len(in_list)-1:
-            break
-        print(x)
