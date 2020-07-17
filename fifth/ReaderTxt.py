@@ -30,7 +30,7 @@ class ReaderTxt(object):
             raise StopIteration
 
 
-if  __name__ == '__main__':
+if __name__ == '__main__':
     reader_test = ReaderTxt('test.txt')
     reader_test.append_reader()
     people_list = [person for person in reader_test]
